@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>100 посилань</title>
+        <style>
+            p a {
+                color: red;
+            }
+            p a.clicked {
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <p><a href='#' class='level-link' data-level='$i'>Рівень 1</a></p>
+        <script>
+            const links = document.querySelectorAll('.level-link');
+            links.forEach(link => {
+                link.addEventListener('click', event => {
+                    event.preventDefault();
+                    link.classList.add('clicked');
+                });
+            });
+        </script>
+    </body>
+</html>
